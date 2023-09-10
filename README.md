@@ -12,4 +12,9 @@ Clone the repository with the --recursive flag to ensure all submodules are incl
 git clone --recursive https://github.com/joaonotfound/nixos-configuration.git
 ```
 
+## Makefile Flags
+
+- `make system`: Use this command to compile the system configuration.
+- `make home`: Use this command to compile the home manager configuration.
+
 And that's it! Enjoy exploring my NixOS setup. Feel free to customize it to make it your own. Cheers! 🚀
