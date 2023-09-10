@@ -34,6 +34,8 @@
     openvpn
     killall
     ranger
+    sshfs
+    flameshot
  ];
 
  # Activate fonts like Jetbrains 
