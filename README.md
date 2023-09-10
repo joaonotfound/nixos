@@ -1,4 +1,4 @@
-# Awesome NixOS Configuration
+# NixOS Configuration
 
 Welcome to my personal NixOS configuration repository! Here you'll find everything needed to set up my system just the way I like it. From system-wide settings to my home directory tweaks, it's all here.
 
