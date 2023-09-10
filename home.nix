@@ -37,6 +37,7 @@
     sshfs
     flameshot
     lxappearance
+    btop
  ];
 
  # Activate fonts like Jetbrains 
