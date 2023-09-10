@@ -384,7 +384,7 @@ exec --no-startup-id nitrogen --restore; sleep 1;
 #xec_always --no-startup-id ff-theme-util
 #xec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id picom
-# exec_always --no-startup-id polybar
+exec_always --no-startup-id polybar
 
 #exec_always --no-startup-id autotiling
 
