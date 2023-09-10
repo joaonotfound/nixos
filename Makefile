@@ -1,4 +1,6 @@
 
+all:
+	make system && make home
 home:
 	home-manager switch -f ./home.nix
 system:
