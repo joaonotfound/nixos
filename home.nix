@@ -38,6 +38,7 @@
     flameshot
     lxappearance
     btop
+    tilix
  ];
 
  # Activate fonts like Jetbrains 
@@ -54,7 +55,7 @@
     enable = true;
     font.name = "Victor Mono SemiBold 12";
     theme = {
-      name = "Jasper-Dark-Node";
+      name = "Awesthetic-dark";
       package = pkgs.solarc-gtk-theme;
     };
  };

@@ -49,8 +49,8 @@ floating_modifier $mod
 
 # start a terminal
 
-bindsym $mod+Return exec alacritty
-bindsym $mod+t exec alacritty -e ranger
+bindsym $mod+Return exec tilix
+bindsym $mod+t exec tilix -e ranger
 
 # kill focused window
 
