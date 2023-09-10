@@ -32,6 +32,7 @@
     anki
     openvpn
     killall
+    ranger
  ];
 
  # Activate fonts like Jetbrains 

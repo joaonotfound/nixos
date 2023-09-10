@@ -71,14 +71,6 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  environment.variables = {
-    GDK_SCALE = "1.5";
-    GDK_DPI_SCALE = "0.4";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-  };
-
-  services.xserver.dpi = 227;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
