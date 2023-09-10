@@ -167,4 +167,4 @@ configuration {
 //@theme "/home/joao/.local/share/rofi/themes/darker-than-black_v3.rasi"
 //@theme "/home/joao/.local/share/rofi/themes/notes.rasi"
 //@theme "/home/joao/.local/share/rofi/themes/minimal.rasi"
-@theme "/home/joaonotfound/.local/share/rofi/themes/material.rasi"
+@theme "/home/joaonotfound/.local/share/rofi/themes/spotlight-dark.rasi"

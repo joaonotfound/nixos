@@ -384,7 +384,7 @@ exec --no-startup-id nitrogen --restore; sleep 1;
 #xec_always --no-startup-id ff-theme-util
 #xec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id picom
-exec_always --no-startup-id polybar
+# exec_always --no-startup-id polybar
 
 #exec_always --no-startup-id autotiling
 
@@ -515,8 +515,8 @@ set_from_resource $term_color15 color15
 
 # Set inner/outer gaps
 
-gaps inner 4
-gaps outer 4
+gaps inner 2
+gaps outer 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 
