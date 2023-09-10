@@ -45,7 +45,9 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  
+ environment.variables = {
+   GDK_DPI_SCALE = "1.2";
+ };
 
   services.xserver = {
     enable = true;
