@@ -36,6 +36,7 @@
     ranger
     sshfs
     flameshot
+    lxappearance
  ];
 
  # Activate fonts like Jetbrains 
@@ -52,7 +53,7 @@
     enable = true;
     font.name = "Victor Mono SemiBold 12";
     theme = {
-      name = "SolArc-Dark";
+      name = "Jasper-Dark-Node";
       package = pkgs.solarc-gtk-theme;
     };
  };
