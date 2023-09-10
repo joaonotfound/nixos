@@ -67,7 +67,7 @@
 
   # ----- LOCAL FILES ----------
   ".local/share/rofi" = {
-     source = ./themes/rofi/themes;
+     source = ./rofi-themes-collection/themes;
      recursive = true;
    };
 
