@@ -24,6 +24,7 @@
     i3 polybar nitrogen rofi picom
     bitwarden
     go
+    cargo rustc gcc
     pcloud
     gnumake
     zip gzip
