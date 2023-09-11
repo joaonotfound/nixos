@@ -39,6 +39,7 @@
     lxappearance
     btop
     tilix
+    dbeaver
  ];
 
  # Activate fonts like Jetbrains 
