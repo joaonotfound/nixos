@@ -40,6 +40,8 @@
     btop
     tilix
     dbeaver
+    obs-studio
+    obsidian
  ];
 
  # Activate fonts like Jetbrains 
