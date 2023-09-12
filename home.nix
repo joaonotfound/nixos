@@ -14,7 +14,7 @@
     alacritty
     spotify pavucontrol
     discord
-    brave
+    brave chromium
     steam lutris
     zathura
     git
@@ -25,7 +25,6 @@
     bitwarden
     go
     cargo rustc gcc
-    pcloud
     gnumake
     zip gzip
     stow
@@ -42,6 +41,7 @@
     dbeaver
     obs-studio
     obsidian
+    virtualbox
  ];
 
  # Activate fonts like Jetbrains 

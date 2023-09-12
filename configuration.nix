@@ -27,6 +27,11 @@
   # Settings for docker
   virtualisation.docker.enable = true;  
 
+  # Settings for VirtualBox
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  users.extraGroups.vboxusers.members = [ "joaonotfound" ];
+
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
