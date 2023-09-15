@@ -14,7 +14,7 @@
     alacritty
     spotify pavucontrol
     discord
-    brave chromium
+    brave 
     steam lutris
     zathura
     git
@@ -42,6 +42,7 @@
     obs-studio
     obsidian
     virtualbox
+    vagrant terraform
  ];
 
  # Activate fonts like Jetbrains 
