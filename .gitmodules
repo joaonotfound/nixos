@@ -1,6 +1,3 @@
 [submodule "rofi-themes-collection"]
 	path = rofi-themes-collection
 	url = https://github.com/newmanls/rofi-themes-collection.git
-[submodule "wallpapers"]
-	path = wallpapers
-	url = https://github.com/dharmx/walls.git
