@@ -6,6 +6,6 @@ home:
 system:
 	sudo nixos-rebuild switch -I nixos-config=./configuration.nix
 stow:
-	pushd ./data && stow --target="$HOME" */
+	pushd ./stow && stow --target="$HOME" */
 backup:
 	./backup.sh

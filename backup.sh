@@ -3,7 +3,7 @@ current_time=$(date +"%d-%m-%Y")
 
 output_filename="backup-dotfiles-${current_time}.tar"
 
-pushd ./data/
+pushd ./stow/
 tar -czvf "../$output_filename" *
 popd
 
