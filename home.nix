@@ -68,7 +68,6 @@
    # ---- CONFIG FILES ---------
    ".config/i3".source = ./dotfiles/i3; 
    ".config/nitrogen/nitrogen.cfg".source = ./dotfiles/nitrogen/nitrogen.cfg;
-   "wallpapers".source = ./wallpapers;
    ".config/picom".source = ./dotfiles/picom;
    ".config/polybar".source = ./dotfiles/polybar;
    ".config/alacritty".source = ./dotfiles/alacritty;
