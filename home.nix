@@ -21,7 +21,6 @@
     git
     jdk17 maven gradle
     nodejs_20 yarn
-    flutter37
     i3 polybar nitrogen rofi picom
     bitwarden
     go
@@ -43,7 +42,7 @@
     obs-studio
     obsidian
     virtualbox
-    vagrant terraform
+    vagrant
  ];
 
  # Activate fonts like Jetbrains 
