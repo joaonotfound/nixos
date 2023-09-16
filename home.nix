@@ -16,6 +16,7 @@
     discord
     brave 
     steam lutris
+    minecraft
     zathura
     git
     jdk17 maven gradle
