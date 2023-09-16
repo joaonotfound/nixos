@@ -2,3 +2,4 @@ data/
 rofi-themes/
 .vscode/
 *.tar
+stow/
