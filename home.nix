@@ -42,7 +42,7 @@
     obs-studio
     obsidian
     virtualbox
-    vagrant
+    vagrant terraform
  ];
 
  # Activate fonts like Jetbrains 
