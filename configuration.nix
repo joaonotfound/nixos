@@ -8,12 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./virtualisation.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];  
-
+  boot.kernelModules = [  "kvm-amd" "kvm-intel" ]; 
+  
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
@@ -28,15 +30,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Settings for docker
-  virtualisation.docker.enable = true;  
-
-  # Settings for VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  users.extraGroups.vboxusers.members = [ "joaonotfound" ];
-
+  
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
