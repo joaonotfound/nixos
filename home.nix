@@ -43,6 +43,7 @@
     obsidian
     virtualbox
     vagrant terraform
+    direnv
  ];
 
   programs.git = {
