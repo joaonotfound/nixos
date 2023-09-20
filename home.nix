@@ -21,6 +21,7 @@
     git
     jdk17 maven gradle
     nodejs_20 yarn
+    flutter
     i3 polybar nitrogen rofi picom
     bitwarden
     go
