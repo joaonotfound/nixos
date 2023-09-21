@@ -45,6 +45,7 @@
     virtualbox
     vagrant terraform
     direnv
+    nsis
  ];
 
   programs.git = {
