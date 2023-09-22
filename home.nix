@@ -46,6 +46,7 @@
     vagrant terraform
     direnv
     nsis
+    qbittorrent
  ];
 
   programs.git = {
