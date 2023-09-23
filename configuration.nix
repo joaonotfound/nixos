@@ -93,6 +93,7 @@
   
   users.users.joaonotfound = {
     isNormalUser = true;
+    shell = "/run/current-system/sw/bin/zsh";
     description = "joaonotfound";
     extraGroups = [ "networkmanager" "wheel" "docker" "disk" ];
     packages = with pkgs; [
@@ -108,6 +109,7 @@
   environment.systemPackages = with pkgs; [
      steam
      docker
+     zsh
      i3
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
