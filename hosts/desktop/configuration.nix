@@ -3,9 +3,12 @@
 {
   imports =
     [
+      ../../modules/virtualisation.nix
+      ../../modules/i3wm.nix
+      ../../modules/games.nix
+      ../../users/joaonotfound.nix
+
       ./hardware-configuration.nix
-      ./virtualisation.nix
-      ./i3wm.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -67,31 +70,12 @@
     pulse.enable = true;
   };
 
-  users.users.joaonotfound = {
-    isNormalUser = true;
-    shell = "/run/current-system/sw/bin/zsh";
-    description = "joaonotfound";
-    extraGroups = [ "networkmanager" "wheel" "docker" "disk" ];
-    packages = with pkgs; [
-      firefox
-    ];
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    steam
-    docker
     zsh
-    vim
   ];
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
 
   system.stateVersion = "23.05";
 

@@ -7,6 +7,7 @@
   users.users.joaonotfound.extraGroups = [ "libvirtd" "vboxusers" ];
 
   environment.systemPackages = with pkgs; [
+    docker
     virt-manager
     virt-viewer
     spice

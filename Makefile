@@ -6,7 +6,7 @@ home:
 system:
 	sudo nixos-rebuild switch -I nixos-config=./configuration.nix
 flake:
-	sudo nixos-rebuild switch --flake .?submodules=1#home
+	sudo nixos-rebuild switch --flake .?submodules=1#desktop
 stow:
 	pushd ./stow && stow --target="$HOME" */
 backup:

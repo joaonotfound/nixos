@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }@inputs: {
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
 
@@ -110,20 +108,20 @@
 
   home.file = {
     # ---- CONFIG FILES ---------
-    ".config/i3".source = ./dotfiles/i3;
-    ".config/nitrogen/nitrogen.cfg".source = ./dotfiles/nitrogen/nitrogen.cfg;
-    "wallpapers".source = ./wallpapers;
-    ".config/picom".source = ./dotfiles/picom;
-    ".config/polybar".source = ./dotfiles/polybar;
-    ".config/alacritty".source = ./dotfiles/alacritty;
+    ".config/i3".source = ../resources/dotfiles/i3;
+    ".config/nitrogen/nitrogen.cfg".source = ../resources/dotfiles/nitrogen/nitrogen.cfg;
+    "wallpapers".source = ../resources/wallpapers;
+    ".config/picom".source = ../resources/dotfiles/picom;
+    ".config/polybar".source = ../resources/dotfiles/polybar;
+    ".config/alacritty".source = ../resources/dotfiles/alacritty;
     ".config/rofi" = {
-      source = ./dotfiles/rofi;
+      source = ../resources/dotfiles/rofi;
       recursive = true;
     };
 
     # ----- LOCAL FILES ----------
     ".local/share/rofi/themes" = {
-      source = ./rofi-themes-collection/themes;
+      source = ../resources/rofi-themes-collection/themes;
       recursive = true;
     };
 
