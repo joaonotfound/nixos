@@ -1,21 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ../../modules/virtualisation.nix
-      ../../modules/i3wm.nix
-      ../../modules/games.nix
-      ../../users/joaonotfound.nix
-
-      ./hardware-configuration.nix
-    ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.supportedFilesystems = [ "ntfs" ];
-  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
-
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
