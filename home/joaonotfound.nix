@@ -1,4 +1,7 @@
 { config, pkgs, ... }@inputs: {
+  imports = [
+    ../modules/nitrogen.nix
+  ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
 
@@ -30,7 +33,6 @@
     flutter
     i3
     polybar
-    nitrogen
     rofi
     picom
     bitwarden
@@ -63,6 +65,7 @@
     nsis
     qbittorrent
     nixpkgs-fmt
+    opam
   ];
 
   programs.git = {
@@ -109,7 +112,6 @@
   home.file = {
     # ---- CONFIG FILES ---------
     ".config/i3".source = ../resources/dotfiles/i3;
-    ".config/nitrogen/nitrogen.cfg".source = ../resources/dotfiles/nitrogen/nitrogen.cfg;
     "wallpapers".source = ../resources/wallpapers;
     ".config/picom".source = ../resources/dotfiles/picom;
     ".config/polybar".source = ../resources/dotfiles/polybar;
