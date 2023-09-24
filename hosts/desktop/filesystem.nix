@@ -1,17 +1,12 @@
 { config, pkgs, ... }: {
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/1859050a-13a6-470c-8894-cbfb6df8107d";
+    device = "/dev/disk/by-uuid/9d8fdc38-1eca-4025-9d21-132f59803ccb";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/DD5B-72F9";
+    device = "/dev/disk/by-uuid/20D1-B535";
     fsType = "vfat";
-  };
-
-  fileSystems."/mnt/ssd" = {
-    device = "/dev/disk/by-uuid/cfd1ef93-124c-4967-beab-0439d919ebf2";
-    fsType = "ext4";
   };
 
   fileSystems."/mnt/fat" = {
