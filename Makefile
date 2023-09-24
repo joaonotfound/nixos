@@ -10,4 +10,4 @@ flake:
 stow:
 	pushd ./stow && stow --target="$HOME" */
 backup:
-	./backup.sh
+	sh -c ./scripts/backup.sh
