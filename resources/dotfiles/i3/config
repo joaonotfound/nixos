@@ -100,7 +100,6 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+e exec rofi -show drun
 bindsym $mod+r exec rofi -show run
 bindsym $mod+w exec rofi -show window
-bindsym $mod+h exec alacritty -e ranger
 
 # Increase the width of the focused window
 
