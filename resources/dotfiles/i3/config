@@ -59,7 +59,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ----- Apps to be launched on startup -------
 exec --no-startup-id nitrogen --random --set-scaled; sleep 1;
 exec --no-startup-id picom
-exec --no-startup-id i3bar
 
 # Increase the width of the focused window
 bindsym $mod+Shift+Right resize shrink width 10 px or 10 ppt
