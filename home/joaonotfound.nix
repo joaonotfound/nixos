@@ -1,6 +1,7 @@
 { config, pkgs, ... }@inputs: {
   imports = [
     ../modules/nitrogen.nix
+    ../modules/development.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
@@ -11,10 +12,6 @@
 
   home.packages = with pkgs; [
     (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    vim
-    emacs
-    jetbrains.idea-ultimate
-    vscode
     alacritty
     spotify
     pavucontrol
@@ -24,23 +21,11 @@
     lutris
     minecraft
     zathura
-    git
-    jdk17
-    maven
-    gradle
-    nodejs_20
-    yarn
-    flutter
     i3
     polybar
     rofi
     picom
     bitwarden
-    go
-    cargo
-    rustc
-    gcc
-    gnumake
     zip
     gzip
     stow
@@ -62,10 +47,8 @@
     vagrant
     terraform
     direnv
-    nsis
     qbittorrent
     nixpkgs-fmt
-    opam
   ];
 
   programs.git = {
