@@ -3,7 +3,8 @@
   home.packages = with pkgs; [
     vim
     emacs
-    jetbrains.idea-ultimate
+    jetbrains.idea-community
+    android-studio
     vscode
     go
     cargo

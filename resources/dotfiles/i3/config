@@ -36,8 +36,8 @@ bindsym $mod+Tab focus right
 # -------- Apps shorcuts --------
 
 # Terminal
-bindsym $mod+Return exec tilix
-bindsym $mod+h exec tilix -e ranger
+bindsym $mod+Return exec alacritty
+bindsym $mod+h exec alacritty -e ranger
 
 # Pavucontrol
 bindsym $mod+m exec pavucontrol
