@@ -1,5 +1,4 @@
-;; VIRTUAL DESKTOP MANAGEMENT ;; 
-
+;; Virtual Desktops
 switchToVirtualDesktop(pos) {
     global VirtualDesktopAlreadyCreated
     if (!VirtualDesktopAlreadyCreated) {
@@ -15,12 +14,19 @@ switchToVirtualDesktop(pos) {
     }
 }
 
-#1::switchToVirtualDesktop(1) ;; Switch to previous desktop
-#2::switchToVirtualDesktop(2) ;; Swich to next desktop
-#3::switchToVirtualDesktop(3) ;; Swich to next deskto
+#1::switchToVirtualDesktop(1)
+#2::switchToVirtualDesktop(2)
+#3::switchToVirtualDesktop(3)
 #4::return
 
 #Enter::Run "%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
 
-;; /VIRTUAL DESKTOP MANAGEMENT ;; 
-#q::PostMessage, 0x0112, 0xF060,,, A
+;; Close the window
+LWin & q::PostMessage, 0x0112, 0xF060,,, A
+
+;; Toggle fullscreen
+LWin & f::
+   WinGet MX, MinMax, A    
+   If MX
+        WinRestore A
+   Else WinMaximize A
