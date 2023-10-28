@@ -29,7 +29,7 @@
   };
 
   environment.variables = {
-    GDK_DPI_SCALE = "1.2";
+    GDK_DPI_SCALE = "1.1";
   };
 
   # Configure keymap in X11

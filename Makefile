@@ -1,7 +1,7 @@
 
 all:
 	make system && make home
-home:
+user:
 	home-manager switch -f ./home/joaonotfound.nix
 system:
 	sudo nixos-rebuild switch -I nixos-config=./hosts/desktop

@@ -49,6 +49,7 @@
     direnv
     qbittorrent
     nixpkgs-fmt
+    electrum
   ];
 
   # Activate fonts like Jetbrains 

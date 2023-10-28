@@ -1,5 +1,6 @@
 # Set up font
-font pango:Fira Code Regular Nerd Font Complete, Regular 11
+# font pango:Fira Code Regular Nerd Font Complete, Regular 11
+# font pango:Segoe UI 10
 
 # Set inner/outer gaps
 gaps inner 2
