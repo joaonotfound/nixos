@@ -2,6 +2,8 @@
 # font pango:Fira Code Regular Nerd Font Complete, Regular 11
 # font pango:Segoe UI 10
 
+font pango:Fira Code
+
 # Set inner/outer gaps
 gaps inner 2
 gaps outer 2
@@ -37,16 +39,24 @@ bindsym $mod+Tab focus right
 # -------- Apps shorcuts --------
 
 # Terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+h exec alacritty -e ranger
+# bindsym $mod+Return exec alacritty
+# bindsym $mod+h exec alacritty -e ranger
+bindsym $mod+Return exec tilix
+bindsym $mod+h exec tilix -e ranger
 
 # Pavucontrol
 bindsym $mod+m exec pavucontrol
+
+# Peek
+bindsym $mod+p exec peek
 
 # - Rofi
 bindsym $mod+e exec rofi -show drun
 bindsym $mod+r exec rofi -show run
 bindsym $mod+w exec rofi -show window
+
+# - Emacs
+bindsym $mod+i exec emacsclient -nc
 
 # - Flameshot
 bindsym $mod+Print --release exec --no-startup-id flameshot full -c -p $HOME/Pictures/screenshots/
