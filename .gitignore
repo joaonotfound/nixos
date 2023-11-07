@@ -4,3 +4,5 @@ rofi-themes/
 *.tar
 stow/
 result
+.\#*\#*
+\#*\#
