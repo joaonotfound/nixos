@@ -61,10 +61,20 @@
   environment.sessionVariables = {
     PATH = [ "$HOME/go/bin" ];
   };
-  
+
   environment.systemPackages = with pkgs; [
     zsh
   ];
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      dl = "sudo docker logs -f --tail 100 $1";
+      dst = "sudo docker start $1";
+      dso = "sudo docker stop $1";
+      dr = "sudo docker stop $1 && sudo docker start $1";
+    };
+  };
 
   system.stateVersion = "23.05";
 
