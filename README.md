@@ -14,6 +14,7 @@ git clone --recursive https://github.com/joaonotfound/nixos-configuration.git
 
 ## Makefile Flags
 
+- `make flake`: Use this command if you want to use Nix Flakes to setup your system.
 - `make system`: Use this command to compile the system configuration.
 - `make home`: Use this command to compile the home manager configuration.
 
