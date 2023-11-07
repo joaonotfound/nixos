@@ -2,7 +2,7 @@
 
   home.packages = with pkgs; [
     vim
-    emacs
+    emacs29
     jetbrains.idea-community
     android-studio
     vscode
@@ -12,7 +12,7 @@
     gcc
     gnumake
     opam
-    jdk17
+    jdk20
     maven
     gradle
     nodejs_20
@@ -20,6 +20,10 @@
     flutter
     git
     nsis
+    dig
+    nmap
+    powershell
+    remmina
   ];
 
   programs.git = {
