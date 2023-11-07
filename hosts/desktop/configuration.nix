@@ -58,6 +58,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  environment.sessionVariables = {
+    PATH = [ "$HOME/go/bin" ];
+  };
+  
   environment.systemPackages = with pkgs; [
     zsh
   ];

@@ -8,6 +8,8 @@
 
   home.stateVersion = "23.05";
 
+  home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
+  
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -37,6 +39,7 @@
     ranger
     sshfs
     flameshot
+    peek
     lxappearance
     btop
     tilix
@@ -50,6 +53,8 @@
     qbittorrent
     nixpkgs-fmt
     electrum
+    firefox
+    onlyoffice-bin
   ];
 
   # Activate fonts like Jetbrains 
