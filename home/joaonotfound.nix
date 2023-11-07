@@ -46,7 +46,6 @@
     dbeaver
     obs-studio
     obsidian
-    virtualbox
     vagrant
     terraform
     direnv

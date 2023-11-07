@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
 
   programs.dconf.enable = true;
 
@@ -8,8 +6,9 @@
 
   environment.systemPackages = with pkgs; [
     docker
-    virt-manager
-    virt-viewer
+    # virt-manager
+    # virt-viewer
+    # virtualbox
     spice
     spice-gtk
     spice-protocol
