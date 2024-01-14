@@ -1,11 +1,11 @@
 { config, pkgs, ... }: {
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/9d8fdc38-1eca-4025-9d21-132f59803ccb";
+    device = "/dev/disk/by-uuid/9d9f3b69-2fdb-4212-a54f-92293283667e";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/20D1-B535";
+    device = "/dev/disk/by-uuid/8BFE-18B7";
     fsType = "vfat";
   };
 

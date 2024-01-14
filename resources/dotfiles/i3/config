@@ -1,12 +1,11 @@
 # Set up font
 # font pango:Fira Code Regular Nerd Font Complete, Regular 11
 # font pango:Segoe UI 10
-
 font pango:Fira Code
 
 # Set inner/outer gaps
-gaps inner 2
-gaps outer 2
+gaps inner 6
+gaps outer 6
 
 # I3bar configuration
 bar {
@@ -19,13 +18,13 @@ bar {
 set $mod Mod4
 
 # Border settings
-default_border pixel 2
+default_border pixel 0
 default_floating_border none
 
 # Keyboard Layout switchs
-bindsym $mod+F1 exec setxkbmap br
-bindsym $mod+F2 exec setxkbmap ru
-bindsym $mod+F3 exec setxkbmap us
+bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
+bindsym $mod+F2 exec setxkbmap ru # Russian - Russia
+bindsym $mod+F4 exec setxkbmap cn # Chinese - China
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -54,6 +53,7 @@ bindsym $mod+p exec peek
 bindsym $mod+e exec rofi -show drun
 bindsym $mod+r exec rofi -show run
 bindsym $mod+w exec rofi -show window
+bindsym $mod+s exec rofi -show filebrowser
 
 # - Emacs
 bindsym $mod+i exec emacsclient -nc
@@ -91,6 +91,9 @@ bindsym $mod+Shift+f move right
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# Atalho para alternar entre modos flutuante e encaixado
+bindsym $mod+Shift+space floating toggle
 
 # Workspace names
 set $ws1 1

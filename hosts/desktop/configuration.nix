@@ -9,6 +9,7 @@
   networking.hostName = "joaonotfound";
 
   networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -58,13 +59,27 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.sessionVariables = {
-    PATH = [ "$HOME/go/bin" ];
-  };
-
   environment.systemPackages = with pkgs; [
     zsh
+    flatpak
+    prisma-engines
+    ibus
+    ibus-engines.libpinyin
+    libpinyin
+    fcitx5
   ];
+
+  # Note for myself: If you edit this you must restart the system
+  environment.sessionVariables = {
+    PATH = [ "$HOME/go/bin" ];
+    PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
+    PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
+    PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
+    PRISMA_INTROSPECTION_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/introspection-engine";
+    PRISMA_FMT_BINARY = "${pkgs.prisma-engines}/bin/prisma-fmt";
+  };
+
+  services.flatpak.enable = true;
 
   programs.zsh = {
     enable = true;

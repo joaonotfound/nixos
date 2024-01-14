@@ -9,7 +9,7 @@
   home.stateVersion = "23.05";
 
   home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
-  
+
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -54,6 +54,7 @@
     electrum
     firefox
     onlyoffice-bin
+    libsForQt5.okular
   ];
 
   # Activate fonts like Jetbrains 
@@ -95,10 +96,19 @@
 
   };
 
+  xdg = {
+    enable = true;
+    mimeApps.defaultApplications = {
+      "text/plain" = "emacs.desktop";
+    };
+  };
+
   home.sessionVariables = {
+    XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
+    XDG_DATA_HOME = "${config.home.homeDirectory}/.local/share";
+    XDG_CACHE_HOME = "${config.home.homeDirectory}/.cache";
     EDITOR = "emacs";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

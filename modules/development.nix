@@ -1,5 +1,4 @@
 { config, pkgs, ... }@inputs: {
-
   home.packages = with pkgs; [
     vim
     emacs29
@@ -12,18 +11,31 @@
     gcc
     gnumake
     opam
-    jdk20
     maven
     gradle
     nodejs_20
     yarn
     flutter
     git
+    gitAndTools.gitflow
     nsis
     dig
     nmap
+    python39
+    python310Packages.pip
     powershell
     remmina
+    postman
+    insomnia
+    tor-browser-bundle-bin
+    bisq-desktop
+    stripe-cli
+    nodePackages_latest.localtunnel
+    openssl
+    gimp
+    google-chrome
+    nodePackages.pnpm
+    jdk20
   ];
 
   programs.git = {

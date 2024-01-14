@@ -6,9 +6,8 @@
 
   environment.systemPackages = with pkgs; [
     docker
-    # virt-manager
-    # virt-viewer
-    # virtualbox
+    virt-manager
+    virt-viewer
     spice
     spice-gtk
     spice-protocol
