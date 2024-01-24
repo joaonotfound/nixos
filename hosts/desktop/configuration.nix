@@ -33,10 +33,25 @@
     GDK_DPI_SCALE = "1.1";
   };
 
-  # Configure keymap in X11
   services.xserver = {
     layout = "br";
     xkbVariant = "";
+  };
+
+  systemd = {
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = [ "graphical-session.target" ];
+      wants = [ "graphical-session.target" ];
+      after = [ "graphical-session.target" ];
+      serviceConfig = {
+          Type = "simple";
+          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+          Restart = "on-failure";
+          RestartSec = 1;
+          TimeoutStopSec = 10;
+        };
+    };
   };
 
   # Configure console keymap
@@ -67,6 +82,7 @@
     ibus-engines.libpinyin
     libpinyin
     fcitx5
+    polkit_gnome
   ];
 
   # Note for myself: If you edit this you must restart the system

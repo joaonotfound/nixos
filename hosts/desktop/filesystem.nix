@@ -1,24 +1,16 @@
 { config, pkgs, ... }: {
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/9d9f3b69-2fdb-4212-a54f-92293283667e";
-    fsType = "ext4";
-  };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8BFE-18B7";
-    fsType = "vfat";
-  };
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/8ef36418-e988-4398-a0a9-4e91f6449f8f";
+      fsType = "ext4";
+    };
 
-  fileSystems."/mnt/fat" = {
-    device = "/dev/disk/by-label/fat";
-    fsType = "ntfs";
-  };
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/9908-5FAC";
+      fsType = "vfat";
+    };
 
-  fileSystems."/mnt/backup" = {
-    device = "/dev/disk/by-uuid/2479502e-5eab-4f6e-b81d-d70033f61945";
-    fsType = "ext4";
-  };
-
-  swapDevices = [ ];
-
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/3ecfd2fb-5fe5-4b73-9844-89b045293924"; }
+    ];
 }
