@@ -5,6 +5,10 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+    
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
 
   networking.hostName = "joaonotfound";
 
@@ -108,5 +112,4 @@
   };
 
   system.stateVersion = "23.05";
-
 }
