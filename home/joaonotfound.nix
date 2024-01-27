@@ -2,6 +2,7 @@
   imports = [
     ../modules/nitrogen.nix
     ../modules/development.nix
+    ../modules/themes/colloid-papirus.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
@@ -64,15 +65,6 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-    };
-  };
-
-  gtk = {
-    enable = true;
-    font.name = "Victor Mono SemiBold 12";
-    theme = {
-      name = "Awesthetic-dark";
-      package = pkgs.solarc-gtk-theme;
     };
   };
 
