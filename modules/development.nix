@@ -25,7 +25,6 @@
     python310Packages.pip
     powershell
     remmina
-    postman
     insomnia
     tor-browser-bundle-bin
     bisq-desktop
@@ -36,13 +35,11 @@
     google-chrome
     nodePackages.pnpm
     jdk20
+    woeusb-ng
   ];
 
   programs.git = {
     enable = true;
-    userName = "joaonotfound";
-    userEmail = "joaonotfound@protonmail.com";
-
     aliases = {
       st = "status";
       co = "checkout";
