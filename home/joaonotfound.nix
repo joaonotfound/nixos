@@ -79,6 +79,7 @@
   home.file = {
     # ---- CONFIG FILES ---------
     ".config/i3".source = ../resources/dotfiles/i3;
+    ".config/i3status".source = ../resources/dotfiles/i3status;
     "wallpapers".source = ../resources/wallpapers;
     ".config/picom".source = ../resources/dotfiles/picom;
     ".config/polybar".source = ../resources/dotfiles/polybar;
