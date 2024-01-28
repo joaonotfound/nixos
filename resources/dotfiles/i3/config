@@ -23,6 +23,8 @@ set $mod Mod4
 default_border pixel 0
 default_floating_border none
 
+for_window [class="Nitrogen|gnome-font-viewer"] floating enable
+
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
 bindsym $mod+F2 exec setxkbmap ru # Russian - Russia
