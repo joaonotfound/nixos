@@ -87,11 +87,20 @@
     libpinyin
     fcitx5
     polkit_gnome
+    zlib
   ];
-
+  
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      zlib
+    ];
+  };
+  
   # Note for myself: If you edit this you must restart the system
   environment.sessionVariables = {
     PATH = [ "$HOME/go/bin" ];
+    LD_LIBRARY_PATH = "${pkgs.zlib}/lib";
     PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
     PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
     PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
@@ -108,7 +117,7 @@
       dst = "sudo docker start $1";
       dso = "sudo docker stop $1";
       dr = "sudo docker stop $1 && sudo docker start $1";
-    };
+      };
   };
 
   system.stateVersion = "23.05";
