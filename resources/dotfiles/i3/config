@@ -23,7 +23,7 @@ set $mod Mod4
 default_border pixel 0
 default_floating_border none
 
-for_window [class="Nitrogen|gnome-font-viewer"] floating enable
+for_window [class="Nitrogen|gnome-font-viewer|Emoji-mart"] floating enable
 
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
@@ -46,6 +46,9 @@ bindsym $mod+Tab focus right
 # bindsym $mod+h exec alacritty -e ranger
 bindsym $mod+Return exec tilix
 bindsym $mod+h exec tilix -e ranger
+
+# Emoji picker
+bindsym $mod+g exec flatpak run io.github.vemonet.EmojiMart
 
 # Pavucontrol
 bindsym $mod+m exec pavucontrol
