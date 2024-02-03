@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
@@ -92,8 +90,15 @@
     fcitx5
     polkit_gnome
     zlib
+    steam
   ];
   
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
   /** Require to make generic linux binaries like the Intellij Idea's builtin java to work. */
   programs.nix-ld = {
     enable = true;

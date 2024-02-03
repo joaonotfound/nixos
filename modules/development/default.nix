@@ -1,4 +1,6 @@
 { config, pkgs, ... }@inputs: {
+  home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
+  
   home.packages = with pkgs; [
     vim
     emacs29
@@ -23,16 +25,13 @@
     nmap
     python39
     python310Packages.pip
-    powershell
     remmina
     insomnia
     tor-browser-bundle-bin
-    bisq-desktop
     stripe-cli
     nodePackages_latest.localtunnel
     openssl
     gimp
-    google-chrome
     nodePackages.pnpm
     jdk21
     woeusb-ng

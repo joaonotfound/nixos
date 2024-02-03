@@ -4,15 +4,29 @@
 font pango:Fira Code
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 6
+gaps inner 4
+gaps outer 4
 
 # I3bar configuration
 bar {
+        i3bar_command i3bar --transparency
         position bottom
         status_command i3status
+        tray_output primary
         separator_symbol "|"
         font pango:Fira Code Regular 12
+        padding 4px 0
+        colors {
+                background #00000095
+                statusline #ffffff
+                separator #666666
+        
+                focused_workspace  #4c789995 #28557795 #ffffff95
+                active_workspace   #33333395 #5f676a95 #ffffff95
+                inactive_workspace #33333395 #22222295 #88888895
+                urgent_workspace   #2f343a95 #90000095 #ffffff95
+                binding_mode       #2f343a95 #90000095 #ffffff95
+        }
 }
 
 
@@ -75,7 +89,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # ----- Apps to be launched on startup -------
-exec --no-startup-id nitrogen --random --set-scaled; sleep 1;
+exec --no-startup-id nitrogen --random --set-auto; sleep 1;
 exec --no-startup-id picom
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 
 
