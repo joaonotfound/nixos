@@ -65,6 +65,7 @@
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  security.sudo.extraConfig = "Defaults passprompt=\"🔐Password:\"";
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
