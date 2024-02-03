@@ -75,10 +75,14 @@
     pulse.enable = true;
   };
 
+  services.xserver.displayManager.setupCommands = ''
+    ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-0 --primary
+  '';
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [  
     zsh
     flatpak
     prisma-engines
@@ -90,6 +94,7 @@
     zlib
   ];
   
+  /** Require to make generic linux binaries like the Intellij Idea's builtin java to work. */
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
@@ -109,16 +114,6 @@
   };
 
   services.flatpak.enable = true;
-
-  programs.zsh = {
-    enable = true;
-    shellAliases = {
-      dl = "sudo docker logs -f --tail 100 $1";
-      dst = "sudo docker start $1";
-      dso = "sudo docker stop $1";
-      dr = "sudo docker stop $1 && sudo docker start $1";
-      };
-  };
 
   system.stateVersion = "23.05";
 }
