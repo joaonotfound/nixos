@@ -2,9 +2,9 @@
 {
   users.users.joaonotfound = {
     isNormalUser = true;
-    shell = "/run/current-system/sw/bin/zsh";
+    shell = "/etc/profiles/per-user/joaonotfound/bin/fish";
     description = "joaonotfound";
-    extraGroups = [ "networkmanager" "wheel" "docker" "disk" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "disk" "audio" ];
     packages = with pkgs; [ zsh ];
   };
 }

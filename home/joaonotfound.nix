@@ -3,6 +3,7 @@
     ../modules/nitrogen.nix
     ../modules/development.nix
     ../modules/themes/colloid-papirus.nix
+    ../modules/fish.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
