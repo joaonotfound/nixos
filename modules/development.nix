@@ -34,7 +34,7 @@
     gimp
     google-chrome
     nodePackages.pnpm
-    jdk20
+    jdk21
     woeusb-ng
   ];
 
