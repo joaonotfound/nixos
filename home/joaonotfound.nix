@@ -9,7 +9,8 @@
     ../modules/fonts.nix
     ../modules/browsers.nix
     ../modules/terminal/alacritty_terminal.nix
-    ../modules/pdfreader/zathura_reader.nix
+    ../modules/pdf_reader/zathura_reader.nix
+    ../modules/audio_player/rhythmbox.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
