@@ -11,6 +11,7 @@
     ../modules/terminal/alacritty_terminal.nix
     ../modules/pdf_reader/zathura_reader.nix
     ../modules/audio_player/rhythmbox.nix
+    ../modules/image_viewer/shotwell.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";

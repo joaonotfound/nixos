@@ -5,7 +5,6 @@
     rhythmbox
   ];
 
-  # Set Zathura as the default PDF reader
   xdg.mimeApps = {
     enable = true;
     associations.added = {
