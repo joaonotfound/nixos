@@ -9,6 +9,7 @@
     ../modules/fonts.nix
     ../modules/browsers.nix
     ../modules/terminal/alacritty_terminal.nix
+    ../modules/pdfreader/zathura_reader.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
@@ -21,7 +22,6 @@
     spotify
     pavucontrol
     discord
-    zathura
     i3
     rofi
     picom
