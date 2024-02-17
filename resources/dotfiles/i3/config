@@ -58,8 +58,8 @@ bindsym $mod+Tab focus right
 # Terminal
 # bindsym $mod+Return exec alacritty
 # bindsym $mod+h exec alacritty -e ranger
-bindsym $mod+Return exec tilix
-bindsym $mod+h exec tilix -e ranger
+bindsym $mod+Return exec alacritty
+bindsym $mod+h exec alacritty -e ranger
 
 # Emoji picker
 bindsym $mod+g exec flatpak run io.github.vemonet.EmojiMart

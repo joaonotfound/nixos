@@ -1,4 +1,4 @@
-{ config, pkgs, ... }@inputs: {
+{ config, pkgs, lib, ... }@inputs: {
   imports = [
     ../modules/nitrogen.nix
     ../modules/development
@@ -8,6 +8,7 @@
     ../modules/games.nix
     ../modules/fonts.nix
     ../modules/browsers.nix
+    ../modules/terminal/alacritty_terminal.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
@@ -16,8 +17,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; [    
-    alacritty
+  home.packages = with pkgs; [   
     spotify
     pavucontrol
     discord
@@ -39,7 +39,6 @@
     peek
     lxappearance
     btop
-    tilix
     dbeaver
     obs-studio
     obsidian
@@ -63,7 +62,6 @@
     ".config/i3".source = ../resources/dotfiles/i3;
     "wallpapers".source = ../resources/wallpapers;
     ".config/picom".source = ../resources/dotfiles/picom;    
-    ".config/alacritty".source = ../resources/dotfiles/alacritty;
     ".config/rofi" = {
       source = ../resources/dotfiles/rofi;
       recursive = true;
