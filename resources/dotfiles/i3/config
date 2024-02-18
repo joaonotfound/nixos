@@ -80,8 +80,10 @@ bindsym $mod+s exec rofi -show filebrowser
 bindsym $mod+i exec emacsclient -nc
 
 # - Flameshot
+bindsym Print --release exec --no-startup-id flameshot full -c -p $HOME/Pictures/screenshots/
 bindsym $mod+Print --release exec --no-startup-id flameshot full -c -p $HOME/Pictures/screenshots/
 bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui -c -p $HOME/Pictures/screenshots/
+
 
 # - restart i3
 bindsym $mod+Shift+r restart
