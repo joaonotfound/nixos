@@ -1,6 +1,7 @@
 { config, pkgs, ... }@inputs: {
   home.packages = with pkgs; [
     alacritty
+    tabbed
   ];
 
   home.file = {

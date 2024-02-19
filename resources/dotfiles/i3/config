@@ -59,6 +59,7 @@ bindsym $mod+Tab focus right
 # bindsym $mod+Return exec alacritty
 # bindsym $mod+h exec alacritty -e ranger
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec tabbed alacritty --embed
 bindsym $mod+h exec alacritty -e ranger
 
 # Emoji picker
