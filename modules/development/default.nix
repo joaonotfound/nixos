@@ -33,8 +33,11 @@
     openssl
     gimp
     nodePackages.pnpm
-    jdk21
+    jdk20
     woeusb-ng
+
+    
+    nil # Nix Language Server Protocol
   ];
 
   programs.git = {
