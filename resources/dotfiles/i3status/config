@@ -19,6 +19,7 @@ general {
 
 order += "volume master"
 order += "disk /"
+order += "memory"
 #order += "disk /home"
 #order += "run_watch DHCP"
 #order += "ipv6"
@@ -50,7 +51,7 @@ run_watch VPN {
 }
 
 tztime local {
-    format = "🕟 %I:%M%P  📅 %m/%d/%y"
+    format = "🕟 %I:%M%P  📅 %d/%m/%y"
 }
 
 cpu_usage {
@@ -59,6 +60,10 @@ cpu_usage {
 
 cpu_temperature 0 {
 	format = "🌡️ Cpu %degrees°C"
+}
+
+memory {
+        format = "🚇 %used / %total"
 }
 
 disk "/" {
