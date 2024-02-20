@@ -1,4 +1,5 @@
 { config, pkgs, ... }@inputs: {
+
   home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
   
   home.packages = with pkgs; [
@@ -33,12 +34,15 @@
     openssl
     gimp
     nodePackages.pnpm
-    jdk20
     woeusb-ng
-
+    jdk20
     
     nil # Nix Language Server Protocol
   ];
+
+  home.sessionVariables = with pkgs; {
+    JAVA_HOME = "${jdk20}/lib/openjdk";
+  };
 
   programs.git = {
     enable = true;
