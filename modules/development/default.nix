@@ -4,6 +4,7 @@
   
   home.packages = with pkgs; [
     vim
+    wget
     emacs29
     jetbrains.idea-community
     android-studio
