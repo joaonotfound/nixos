@@ -36,10 +36,9 @@
     jdk20
     
     (pkgs.rust-bin.stable.latest.default.override {
-      extensions = [ "rust-src" "cargo" "rustc" ];
+      extensions = [ "rust-src" "cargo" "rustc" "clippy" ];
     })
     rust-analyzer
-    clippy
     
     gcc
     nil # Nix Language Server Protocol
