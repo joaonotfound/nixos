@@ -68,6 +68,9 @@ bindsym $mod+g exec flatpak run io.github.vemonet.EmojiMart
 # Pavucontrol
 bindsym $mod+m exec pavucontrol
 
+# Nitrogen
+bindsym $mod+n exec nitrogen
+
 # Peek
 bindsym $mod+p exec peek
 
