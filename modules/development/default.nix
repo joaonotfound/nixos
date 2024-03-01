@@ -1,4 +1,4 @@
-{ config, pkgs, ... }@inputs: {
+{ config, pkgs, ... }: {
 
   home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
   
@@ -10,9 +10,6 @@
     android-studio
     vscode
     go
-    cargo
-    rustc
-    gcc
     gnumake
     opam
     maven
@@ -38,11 +35,21 @@
     woeusb-ng
     jdk20
     
+    (pkgs.rust-bin.stable.latest.default.override {
+      extensions = [ "rust-src" "cargo" "rustc" ];
+    })
+    rust-analyzer
+    clippy
+    
+    gcc
     nil # Nix Language Server Protocol
   ];
 
   home.sessionVariables = with pkgs; {
     JAVA_HOME = "${jdk20}/lib/openjdk";
+    RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.default.override {
+      extensions = [ "rust-src" ];
+    }}/lib/rustlib/src/rust/library";
   };
 
   programs.git = {
