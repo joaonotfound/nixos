@@ -1,5 +1,9 @@
 { config, pkgs, ... }: {
 
+  imports = [ 
+    ./jdk_21.nix
+  ];
+
   home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
   
   home.packages = with pkgs; [
@@ -33,7 +37,6 @@
     gimp
     nodePackages.pnpm
     woeusb-ng
-    jdk20
     
     (pkgs.rust-bin.stable.latest.default.override {
       extensions = [ "rust-src" "cargo" "rustc" "clippy" ];
@@ -44,8 +47,7 @@
     nil # Nix Language Server Protocol
   ];
 
-  home.sessionVariables = with pkgs; {
-    JAVA_HOME = "${jdk20}/lib/openjdk";
+  home.sessionVariables = {
     RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.default.override {
       extensions = [ "rust-src" ];
     }}/lib/rustlib/src/rust/library";
