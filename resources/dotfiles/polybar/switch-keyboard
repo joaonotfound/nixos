@@ -1,0 +1,7 @@
+current=`xkb-switch`
+if [ "$current" == "br" ]
+then 
+    setxkbmap ru
+else 
+    setxkbmap br
+fi

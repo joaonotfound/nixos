@@ -4,7 +4,7 @@
     ../modules/development
     ../modules/themes/colloid-papirus.nix
     ../modules/fish.nix
-    ../modules/bar/i3status.nix
+    ../modules/bar/polybar.nix
     ../modules/games.nix
     ../modules/fonts.nix
     ../modules/browsers.nix
@@ -48,6 +48,7 @@
     qbittorrent
     nixpkgs-fmt
     electrum
+    tradingview
     onlyoffice-bin
     libsForQt5.okular
   ];

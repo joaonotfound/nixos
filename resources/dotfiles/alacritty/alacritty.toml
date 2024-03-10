@@ -81,7 +81,7 @@ history = 10000
 multiplier = 3
 
 [window]
-opacity = 0.85
+opacity = 0.75
 
 [window.dimensions]
 columns = 140

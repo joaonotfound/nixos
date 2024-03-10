@@ -1,33 +1,34 @@
 # Set up font
 # font pango:Fira Code Regular Nerd Font Complete, Regular 11
-# font pango:Segoe UI 10
-font pango:Fira Code
+font pango:Segoe UI 10
+# font pango:Fira Code
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 6
+smart_gaps on
+gaps inner 4
+gaps outer 2
 
 # I3bar configuration
-bar {
-        i3bar_command i3bar --transparency
-        position bottom
-        status_command i3status
-        tray_output primary
-        separator_symbol "|"
-        font pango:Fira Code Regular 12
-        padding 4px 0
-        colors {
-                background #00000095
-                statusline #ffffff
-                separator #666666
+# bar {
+#         i3bar_command i3bar --transparency
+#         position top
+#         status_command i3status
+#         tray_output primary
+#         separator_symbol "|"
+#         font pango:JetBrains Mono Bold 12
+#         padding 4px 12px
+#         colors {
+#                 background #00000095
+#                 statusline #ffffff
+#                 separator #666666
         
-                focused_workspace  #4c789995 #28557795 #ffffff95
-                active_workspace   #33333395 #5f676a95 #ffffff95
-                inactive_workspace #33333395 #22222295 #88888895
-                urgent_workspace   #2f343a95 #90000095 #ffffff95
-                binding_mode       #2f343a95 #90000095 #ffffff95
-        }
-}
+#                 focused_workspace  #4c789995 #28557795 #ffffff95
+#                 active_workspace   #33333395 #5f676a95 #ffffff95
+#                 inactive_workspace #33333395 #22222295 #88888895
+#                 urgent_workspace   #2f343a95 #90000095 #ffffff95
+#                 binding_mode       #2f343a95 #90000095 #ffffff95
+#         }
+# }
 
 
 # Set windows key as main key
@@ -47,6 +48,9 @@ bindsym $mod+F4 exec setxkbmap cn # Chinese - China
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar
+tiling_drag modifier titlebar
 
 # kill focused window
 bindsym $mod+q kill
@@ -84,6 +88,8 @@ bindsym $mod+s exec rofi -show filebrowser
 # - Emacs
 bindsym $mod+i exec emacsclient -nc
 
+bindsym $mod+t exec tradingview
+
 # - Flameshot
 bindsym Print --release exec --no-startup-id flameshot full -c -p $HOME/Pictures/screenshots/
 bindsym $mod+Print --release exec --no-startup-id flameshot full -c -p $HOME/Pictures/screenshots/
@@ -98,8 +104,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # ----- Apps to be launched on startup -------
 exec --no-startup-id nitrogen --random --set-auto; sleep 1;
 exec --no-startup-id picom
+exec --no-startup-id polybar
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 
-
+exec --no-startup-id systemctl start --user emacs
 
 # Increase the width of the focused window
 bindsym $mod+Shift+Right resize shrink width 10 px or 10 ppt
