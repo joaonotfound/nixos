@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/23.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,11 +14,15 @@
   outputs = { 
     self, 
     nixpkgs, 
+    nixpkgs-stable, 
     home-manager,
     rust-overlay,
     ...
   }@inputs: let
       system = "x86_64-linux";
+      pkgs-stable = import nixpkgs-stable {
+        inherit system;
+      };
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -39,6 +44,8 @@
             home-manager.extraSpecialArgs = {
               inherit inputs;
               inherit pkgs;
+              inherit pkgs-stable;
+              inherit system;
             };
             home-manager.users = {
               joaonotfound = {

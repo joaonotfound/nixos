@@ -4,8 +4,8 @@
 font pango:Fira Code
 
 # Set inner/outer gaps
-gaps inner 4
-gaps outer 4
+gaps inner 6
+gaps outer 6
 
 # I3bar configuration
 bar {
@@ -37,7 +37,8 @@ set $mod Mod4
 default_border pixel 0
 default_floating_border none
 
-for_window [class="Nitrogen|gnome-font-viewer|Emoji-mart"] floating enable
+for_window [class="Nitrogen|gnome-font-viewer|Emoji-mart|jetbrains-studio"] floating enable
+for_window [title=".*Emulator.*"] floating enable
 
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil

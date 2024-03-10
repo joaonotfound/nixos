@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, pkgs-stable, ... }: {
 
   imports = [ 
     ./jdk_21.nix
@@ -7,6 +7,8 @@
   home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
   
   home.packages = with pkgs; [
+    pkgs-stable.flutter-unwrapped
+
     vim
     wget
     emacs29
@@ -20,7 +22,6 @@
     gradle
     nodejs_20
     yarn
-    flutter
     git
     gitAndTools.gitflow
     nsis
