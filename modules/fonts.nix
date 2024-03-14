@@ -6,5 +6,6 @@
     (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })    
     jetbrains-mono
     fira-code
+    noto-fonts
   ];
 }
