@@ -5,6 +5,7 @@
   home.packages = with pkgs; [ 
     (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })    
     jetbrains-mono
+    inter
     fira-code
     noto-fonts
   ];

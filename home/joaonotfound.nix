@@ -51,6 +51,8 @@
     tradingview
     onlyoffice-bin
     libsForQt5.okular
+    calibre
+    foliate
   ];
   
   # Set GTK's dark mode
