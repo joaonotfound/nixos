@@ -31,13 +31,28 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
+  i18n.inputMethod = { 
+    enabled = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [ libpinyin ]; 
+  };
+  
   environment.variables = {
     GDK_DPI_SCALE = "1.1";
   };
 
-  services.xserver = {
-    layout = "br";
-    xkbVariant = "";
+  services.xserver = {    
+    xkb = {
+      layout = "br";
+      variant = "";
+    };
+    displayManager = { 
+      setupCommands = ''
+        ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-0 --primary
+      '';
+      sessionCommands = ''
+        ibus-daemon --xim -d -r
+      '';
+    };
   };
 
   systemd = {
@@ -74,12 +89,10 @@
     pulse.enable = true;
   };
 
-  services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-0 --primary
-  '';
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  programs.adb.enable = true;
 
   environment.systemPackages = with pkgs; [  
     zsh
@@ -100,7 +113,7 @@
     dedicatedServer.openFirewall = true;
   };
 
-  /** Require to make generic linux binaries like the Intellij Idea's builtin java to work. */
+  /** Required to make generic linux binaries like the Intellij Idea's builtin java to work. */
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
