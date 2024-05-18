@@ -43,7 +43,8 @@ for_window [title=".*Emulator.*"] floating enable
 
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
-bindsym $mod+F2 exec setxkbmap ru # Russian - Russia
+bindsym $mod+F2 exec setxkbmap ru # Russian
+bindsym $mod+F3 exec setxkbmap us # English 
 bindsym $mod+F4 exec setxkbmap cn # Chinese - China
 
 # Use Mouse+$mod to drag floating windows
