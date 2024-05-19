@@ -10,6 +10,7 @@
     pkgs-stable.flutter-unwrapped
 
     vim
+    neovim
     wget
     emacs29
     jetbrains.idea-community
