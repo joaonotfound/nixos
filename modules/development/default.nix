@@ -40,6 +40,8 @@
     nodePackages.pnpm
     woeusb-ng
     
+    traceroute
+
     (pkgs.rust-bin.stable.latest.default.override {
       extensions = [ "rust-src" "cargo" "rustc" "clippy" ];
     })
