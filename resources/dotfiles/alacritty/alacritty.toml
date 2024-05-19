@@ -61,15 +61,15 @@ text = "0xffffff"
 size = 14
 
 [font.bold]
-family = "JetBrains Mono"
+family = "Cartograph CF"
 style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "Cartograph CF"
 style = "Italic"
 
 [font.normal]
-family = "JetBrains Mono"
+family = "Cartograph CF"
 style = "SemiBold"
 
 [font.offset]
