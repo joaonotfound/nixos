@@ -6,3 +6,4 @@ stow/
 result
 .\#*\#*
 \#*\#
+nvim/plugin
