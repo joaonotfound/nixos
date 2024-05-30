@@ -6,6 +6,7 @@
     ../modules/fish.nix
     ../modules/bar/polybar.nix
     ../modules/games.nix
+    ../modules/bluetooth.nix
     ../modules/fonts.nix
     ../modules/browsers.nix
     ../modules/terminal/alacritty_terminal.nix
