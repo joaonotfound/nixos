@@ -7,6 +7,7 @@
     jetbrains-mono
     inter
     fira-code
+	iosevka
     noto-fonts
   ];
 }

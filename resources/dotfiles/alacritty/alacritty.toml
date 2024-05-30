@@ -58,18 +58,18 @@ background = "0xdc3232"
 text = "0xffffff"
 
 [font]
-size = 14
+size = 16
 
 [font.bold]
-family = "Cartograph CF"
+family = "Iosevka"
 style = "Bold"
 
 [font.italic]
-family = "Cartograph CF"
+family = "Iosevka"
 style = "Italic"
 
 [font.normal]
-family = "Cartograph CF"
+family = "Iosevka"
 style = "SemiBold"
 
 [font.offset]
