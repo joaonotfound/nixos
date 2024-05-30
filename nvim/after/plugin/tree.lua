@@ -6,4 +6,12 @@
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+	view = {
+		width = {
+			padding = 20
+		}
+	}
+})
+
+require("nvim-web-devicons").setup()

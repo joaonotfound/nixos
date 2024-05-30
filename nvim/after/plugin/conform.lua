@@ -12,7 +12,7 @@ conform.setup({
 })
 
 
-vim.keymap.set('n', '<leader>l', function()
+vim.keymap.set({ 'n', 'v' }, '=', function()
 	conform.format({
 		lsp_fallback = true,
 		async = false,

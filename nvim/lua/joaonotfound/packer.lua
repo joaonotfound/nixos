@@ -5,50 +5,57 @@ vim.cmd [[packadd packer.nvim]]
 
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
 
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.6',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
 
-  use "rose-pine/neovim"
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
-  use("theprimeagen/harpoon")
-  use("mbbill/undotree")
-  use("tpope/vim-fugitive")
-  use("mfussenegger/nvim-jdtls")
+	use "rose-pine/neovim"
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	use('nvim-treesitter/playground')
+	use("theprimeagen/harpoon")
+	use("mbbill/undotree")
 
-  use("savq/melange-nvim")
+	use("tpope/vim-fugitive")
+	use("tpope/vim-surround")
 
-  use ('numToStr/Comment.nvim')
+	use("mfussenegger/nvim-jdtls")
 
-  use("lewis6991/gitsigns.nvim")
+	use("savq/melange-nvim")
 
-  use("nvim-tree/nvim-tree.lua")
+	use "lukas-reineke/indent-blankline.nvim"
 
-  use('m4xshen/autoclose.nvim')
+	use("mg979/vim-visual-multi")
 
-  use('stevearc/conform.nvim')
+	use('numToStr/Comment.nvim')
 
-  use {
-	  'nvim-lualine/lualine.nvim',
-	  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
+	use("lewis6991/gitsigns.nvim")
 
-  use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
-	  requires = {
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
-		  {'neovim/nvim-lspconfig'},
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'L3MON4D3/LuaSnip'},
-	  }
-  }
+	use("nvim-tree/nvim-tree.lua")
+
+	use('m4xshen/autoclose.nvim')
+
+	use('stevearc/conform.nvim')
+	use('nvim-tree/nvim-web-devicons')
+
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
+
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		requires = {
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
+			{ 'neovim/nvim-lspconfig' },
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'L3MON4D3/LuaSnip' },
+		}
+	}
 end)
-
