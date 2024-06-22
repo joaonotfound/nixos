@@ -1,18 +1,18 @@
-{ config
-, pkgs
-, ...
-}@inputs: {
-
+{ pkgs, ...}: {
+  imports = [
+    ../../themes/gnome/colloid-papirus.nix
+  ];
+  
   environment.systemPackages = with pkgs; [
     i3
   ];
 
+	xdg.portal.enable = true;
   services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
     desktopManager = {
       gnome.enable = true;
-      # xterm.enable = true;
     };
     displayManager = {
       gdm.enable = true;

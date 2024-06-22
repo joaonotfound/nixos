@@ -1,7 +1,10 @@
-{ config, pkgs, ... }@inputs: {
+{ config, ... }: {
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+
+  boot.initrd.kernelModules = [ 	
+		"v4l2loopback"
+	];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

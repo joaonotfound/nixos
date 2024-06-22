@@ -1,4 +1,4 @@
-{ config, pkgs, ... }@inputs: {
+{ pkgs, ... }: {
   # Activate fonts like Jetbrains 
   fonts.fontconfig.enable = true;
 
@@ -7,7 +7,7 @@
     jetbrains-mono
     inter
     fira-code
-	iosevka
+	  iosevka
     noto-fonts
   ];
 }

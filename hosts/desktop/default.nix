@@ -1,7 +1,7 @@
 {
   imports = [
     ../../modules/virtualisation.nix
-    ../../modules/i3wm.nix
+    ../../modules/de/gnome.nix
     ../../users
 
     ./configuration.nix

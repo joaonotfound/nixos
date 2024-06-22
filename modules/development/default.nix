@@ -27,6 +27,11 @@
     gitAndTools.gitflow
     nsis
     dig
+    hfsprogs
+
+    ripgrep
+
+    unzip
     nmap
     python39
     python310Packages.pip
@@ -39,6 +44,8 @@
     gimp
     nodePackages.pnpm
     woeusb-ng
+
+    gtk3
     
     traceroute
 
@@ -50,6 +57,7 @@
     gcc
     nil # Nix Language Server Protocol
   ];
+
 
   home.sessionVariables = {
     RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.default.override {

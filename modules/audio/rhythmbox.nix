@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     rhythmbox
   ];
@@ -14,5 +12,4 @@
        "audio/mpeg" = ["rhythmbox.desktop"];
     };
   };
-
 }

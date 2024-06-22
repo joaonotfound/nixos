@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
@@ -35,7 +35,9 @@
     enabled = "ibus";
     ibus.engines = with pkgs.ibus-engines; [ libpinyin ]; 
   };
-  
+
+  services.gnome.gnome-browser-connector.enable = true;
+
   environment.variables = {
     GDK_DPI_SCALE = "1.1";
   };
@@ -105,6 +107,9 @@
     polkit_gnome
     zlib
     steam
+	
+    pkgs.wireguard-tools
+    openssh
   ];
   
   programs.steam = {

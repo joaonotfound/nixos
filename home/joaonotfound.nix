@@ -2,17 +2,16 @@
   imports = [
     ../modules/nitrogen.nix
     ../modules/development
-    ../modules/themes/colloid-papirus.nix
-    ../modules/fish.nix
+    ../modules/shells/fish.nix
     ../modules/bar/polybar.nix
     ../modules/games.nix
     ../modules/bluetooth.nix
     ../modules/fonts.nix
-    ../modules/browsers.nix
-    ../modules/terminal/alacritty_terminal.nix
-    ../modules/pdf_reader/zathura_reader.nix
-    ../modules/audio_player/rhythmbox.nix
-    ../modules/image_viewer/shotwell.nix
+    ../modules/browser.nix
+    ../modules/terminal/kitty.nix
+    ../modules/reading/zathura.nix
+    ../modules/audio/rhythmbox.nix
+    ../modules/images/shotwell.nix
   ];
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";

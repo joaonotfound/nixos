@@ -7,8 +7,9 @@
   programs.fish = {
     enable = true;
     shellInit = ''zoxide init fish | source'';
-	shellAliases = {
+		shellAliases = {
 			v = "nvim";
+			c = "code";
 		};
   };
 }

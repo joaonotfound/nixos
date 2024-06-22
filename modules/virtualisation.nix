@@ -1,5 +1,4 @@
-{ config, pkgs, ... }: {
-
+{ pkgs, ... }: {
   programs.dconf.enable = true;
 
   users.users.joaonotfound.extraGroups = [ "libvirtd" "vboxusers" ];

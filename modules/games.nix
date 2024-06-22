@@ -1,9 +1,13 @@
-{ config, pkgs, ... }@inputs: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     heroic
-    retroarch
+
+    # retroarchFull
+		# emulationstation-de
+
     lutris
-    minecraft
+	  minecraft
+	  prismlauncher
   ];
 }
 

@@ -2,8 +2,13 @@ data/
 rofi-themes/
 .vscode/
 *.tar
+backup/
 stow/
 result
 .\#*\#*
 \#*\#
+nvim/[plugin|plugins|workspace|pack]
 nvim/plugin
+nvim/pack
+nvim/plugins
+nvim/workspace

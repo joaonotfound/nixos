@@ -1,5 +1,4 @@
-{ config, pkgs, ... }: {
-
+{ ... }: {
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/8ef36418-e988-4398-a0a9-4e91f6449f8f";
       fsType = "ext4";
