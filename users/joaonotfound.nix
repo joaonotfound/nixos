@@ -1,5 +1,4 @@
-{ config, pkgs, ... }@inputs:
-{
+{ pkgs, ... }: {
   users.users.joaonotfound = {
     isNormalUser = true;
     shell = "/etc/profiles/per-user/joaonotfound/bin/fish";

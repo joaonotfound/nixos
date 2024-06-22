@@ -1,67 +1,36 @@
-{ config, pkgs, pkgs-stable, ... }: {
-
-  imports = [ 
-    ./jdk_21.nix
-  ];
-
-  home.sessionPath = [ "${config.home.homeDirectory}/go/bin" ];
-  
+{ pkgs, ... }: {
   home.packages = with pkgs; [
-    pkgs-stable.flutter-unwrapped
-
-    wget
-    emacs29
-    jetbrains.idea-community
-    android-studio
-    go
-    gnumake
-    opam
+    /** Utilities */
     maven
     gradle
-    nodejs_20
-    yarn
+
+    wget
+    gnumake    
+    
     git
     gitAndTools.gitflow
+
     nsis
     dig
     hfsprogs
 
-    ripgrep
-
     unzip
     nmap
-    python39
-    python310Packages.pip
+    
     remmina
     insomnia
-    tor-browser-bundle-bin
-    stripe-cli
-    nodePackages_latest.localtunnel
+    
     openssl
+
     gimp
-    nodePackages.pnpm
     woeusb-ng
 
     gtk3
     
     traceroute
-
-    (pkgs.rust-bin.stable.latest.default.override {
-      extensions = [ "rust-src" "cargo" "rustc" "clippy" ];
-    })
-
-    rust-analyzer
-    
-    gcc
+  
     nil # Nix Language Server Protocol
   ];
-
-
-  home.sessionVariables = {
-    RUST_SRC_PATH = "${pkgs.rust-bin.stable.latest.default.override {
-      extensions = [ "rust-src" ];
-    }}/lib/rustlib/src/rust/library";
-  };
 
   programs.git = {
     enable = true;

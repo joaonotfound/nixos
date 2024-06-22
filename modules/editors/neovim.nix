@@ -1,6 +1,8 @@
-{ pkgs }:{
+{ pkgs, ... }:{
   home.packages = with pkgs; [
     vim
-    nvim
+    neovim
+
+    ripgrep /** Required to make livegrep plugin work */
   ];
 }

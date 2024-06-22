@@ -1,20 +1,40 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, environment, ... }: {
   imports = [
     ../modules/nitrogen.nix
-    ../modules/development
-    ../modules/shells/fish.nix
-    ../modules/bar/polybar.nix
-    ../modules/games.nix
-    ../modules/editors/vscode.nix
-    ../modules/editors/neovim.nix
-    ../modules/bluetooth.nix
+    ../modules/development  
+    
     ../modules/fonts.nix
     ../modules/browser.nix
-    ../modules/terminal/kitty.nix
+    
+    /** Terminals */
+    ../modules/terminal/${environment.terminal}.nix
+
+    /** User shell */
+    ../modules/shells/${environment.shell}.nix
+    
+    /** Bluetoth */
+    (if (environment.bluetooth.enable) then ../modules/bluetooth.nix else {} )
+    
+    /** Maybe implement a better way to detect whether thre's a app launcher or not? */
+    (if (environment.de != "gnome") then ../modules/launchers/${environment.twm.appLauncher}.nix else {} )
+
+    /** Desktop bars */
+    (if (environment.de != "gnome") then ../modules/bar/${environment.twm.desktopBar}.nix else {} )
+    
+    /** Games launchers */
+    (if (environment.gamesLaunchers) then ../modules/games.nix else {} )
+
+    ../themes/gnome/${environment.gnome.theme}
+    
     ../modules/reading/zathura.nix
     ../modules/audio/rhythmbox.nix
     ../modules/images/shotwell.nix
-  ];
+  ]
+  /** Editors */
+  ++ (map (editor: ../modules/editors/${editor}.nix) environment.editors)
+
+  /** Programming languages */
+  ++ (map (sdk: ../modules/development/${sdk}.nix) environment.SDKs);
   
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";

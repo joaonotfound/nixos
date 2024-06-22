@@ -1,8 +1,4 @@
 { pkgs, ...}: {
-  imports = [
-    ../../themes/gnome/colloid-papirus.nix
-  ];
-  
   environment.systemPackages = with pkgs; [
     i3
   ];
