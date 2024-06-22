@@ -9,13 +9,10 @@
   home.packages = with pkgs; [
     pkgs-stable.flutter-unwrapped
 
-    vim
-    neovim
     wget
     emacs29
     jetbrains.idea-community
     android-studio
-    vscode
     go
     gnumake
     opam
@@ -52,6 +49,7 @@
     (pkgs.rust-bin.stable.latest.default.override {
       extensions = [ "rust-src" "cargo" "rustc" "clippy" ];
     })
+
     rust-analyzer
     
     gcc
@@ -82,5 +80,4 @@
       cleanup = "!f() { git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; }; f";
     };
   };
-
 }

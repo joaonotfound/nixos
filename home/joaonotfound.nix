@@ -5,6 +5,8 @@
     ../modules/shells/fish.nix
     ../modules/bar/polybar.nix
     ../modules/games.nix
+    ../modules/editors/vscode.nix
+    ../modules/editors/neovim.nix
     ../modules/bluetooth.nix
     ../modules/fonts.nix
     ../modules/browser.nix
