@@ -22,4 +22,7 @@
       enable = true;
     };
   };
+
+  # Configuration file
+  ".config/i3".source = ../resources/dotfiles/i3;
 }

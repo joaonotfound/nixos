@@ -13,6 +13,7 @@
     ../modules/audio/rhythmbox.nix
     ../modules/images/shotwell.nix
   ];
+  
   home.username = "joaonotfound";
   home.homeDirectory = "/home/joaonotfound";
 
@@ -25,8 +26,6 @@
     pavucontrol
     discord
     i3
-    rofi
-    picom
     bitwarden
     bisq-desktop
     zip
@@ -63,21 +62,7 @@
   };
 
   home.file = {
-    # ---- CONFIG FILES ---------
-    ".config/i3".source = ../resources/dotfiles/i3;
-    "wallpapers".source = ../resources/wallpapers;
-    ".config/picom".source = ../resources/dotfiles/picom;    
-    ".config/rofi" = {
-      source = ../resources/dotfiles/rofi;
-      recursive = true;
-    };
-
-    # ----- LOCAL FILES ----------
-    ".local/share/rofi/themes" = {
-      source = ../resources/rofi-themes-collection/themes;
-      recursive = true;
-    };
-
+    "wallpapers".source = ../resources/wallpapers;    
   };
 
   xdg = {
