@@ -14,7 +14,6 @@
 
   services.xserver = {
     enable = true;
-    videoDrivers = [ "nvidia" ];
 
     desktopManager = {
 			gnome.enable = true;
