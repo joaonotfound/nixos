@@ -1,6 +1,5 @@
 { config, pkgs, environment, ... }: {
   imports = [
-    ../modules/nitrogen.nix
     ../modules/development  
     
     ../modules/fonts.nix
@@ -13,17 +12,17 @@
     ../modules/shells/${environment.shell}.nix
     
     /** Bluetoth */
-    (if (environment.bluetooth.enable) then ../modules/bluetooth.nix else {} )
-    
-    /** Maybe implement a better way to detect whether thre's a app launcher or not? */
-    (if (environment.de != "gnome") then ../modules/launchers/${environment.twm.appLauncher}.nix else {} )
-
-    /** Desktop bars */
-    (if (environment.de != "gnome") then ../modules/bar/${environment.twm.desktopBar}.nix else {} )
+    (if (environment.bluetooth.enable) then ../modules/bluetooth.nix else {} )  
     
     /** Games launchers */
     (if (environment.gamesLaunchers) then ../modules/games.nix else {} )
 
+    /** Desktop environmetn */
+    ../modules/de    
+    
+    /** Trading and crypto */
+    (if (environment.trading.enable) then ../modules/btc else {} )
+    
     ../themes/gnome/${environment.gnome.theme}
     
     ../modules/reading/zathura.nix
@@ -45,11 +44,9 @@
 
   home.packages = with pkgs; [   
     spotify
-    pavucontrol
     discord
-    i3
     bitwarden
-    bisq-desktop
+    peek    
     zip
     gzip
     stow
@@ -58,9 +55,6 @@
     killall
     ranger
     sshfs
-    flameshot
-    peek
-    lxappearance
     btop
     dbeaver
     obs-studio
@@ -68,8 +62,6 @@
     direnv
     qbittorrent
     nixpkgs-fmt
-    electrum
-    tradingview
     onlyoffice-bin
     libsForQt5.okular
     calibre

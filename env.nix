@@ -30,6 +30,9 @@
 
       /** Whether add bluetooth related apps or not */
       bluetooth.enable = true;
+      
+      /** Whether add crypto wallets, trading view, etc. or not */
+      trading.enable = true;
 
       gnome = {
         theme = "colloid";
