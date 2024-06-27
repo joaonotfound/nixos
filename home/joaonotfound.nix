@@ -1,4 +1,4 @@
-{ config, pkgs, environment, ... }: {
+{ config, pkgs, pgks-22-11, environment, ... }: {
   imports = [
     ../modules/development  
     
@@ -56,6 +56,7 @@
     ranger
     sshfs
     btop
+    pgks-22-11.pcloud
     dbeaver
     obs-studio
     obsidian

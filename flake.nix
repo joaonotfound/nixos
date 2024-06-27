@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/23.05";
+    nixpkgs-22-11.url = "github:nixos/nixpkgs/22.11";
     home-manager = {  
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +16,7 @@
     self, 
     nixpkgs, 
     nixpkgs-stable, 
+    nixpkgs-22-11,
     home-manager,
     rust-overlay,
     ...
@@ -22,6 +24,10 @@
       system = "x86_64-linux";
       env = (import ./env.nix) {};
       pkgs-stable = import nixpkgs-stable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      pgks-22-11 = import nixpkgs-22-11 {
         inherit system;
         config.allowUnfree = true;
       };
@@ -50,6 +56,7 @@
               inherit inputs;
               inherit pkgs;
               inherit pkgs-stable;
+              inherit pgks-22-11;
               inherit system;
               environment = env.users.desktop.environment;
             };
