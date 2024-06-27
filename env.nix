@@ -1,4 +1,8 @@
 {}: {
+  system = {
+    locale = "en_US.UTF-8";
+  };
+  
   users.desktop.environment = {
       /** 
         Which desktop environment/tiling window manager will be used.

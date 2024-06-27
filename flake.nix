@@ -35,7 +35,10 @@
     in
     {
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {        
-        specialArgs = { inherit inputs; };
+        specialArgs = { 
+          inherit inputs;
+          system = env.system;
+        };
 
         modules = [
           ./hosts/desktop
