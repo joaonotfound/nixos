@@ -91,7 +91,6 @@
   environment.systemPackages = with pkgs; [  
     zsh
     flatpak
-    prisma-engines
     ibus
     ibus-engines.libpinyin
     libpinyin
@@ -122,11 +121,6 @@
   environment.sessionVariables = {
     PATH = [ "$HOME/go/bin" ];
     LD_LIBRARY_PATH = "${pkgs.zlib}/lib";
-    PRISMA_SCHEMA_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/schema-engine";
-    PRISMA_QUERY_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/query-engine";
-    PRISMA_QUERY_ENGINE_LIBRARY = "${pkgs.prisma-engines}/lib/libquery_engine.node";
-    PRISMA_INTROSPECTION_ENGINE_BINARY = "${pkgs.prisma-engines}/bin/introspection-engine";
-    PRISMA_FMT_BINARY = "${pkgs.prisma-engines}/bin/prisma-fmt";
   };
 
   services.flatpak.enable = true;
