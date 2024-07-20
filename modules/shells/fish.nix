@@ -10,6 +10,17 @@
 		shellAliases = {
 			v = "nvim";
 			c = "code";
+			p = ''fish -P --init-command "function fish_prompt
+        set_color green
+        echo -n (whoami)@\'\'
+        set_color white
+        echo -n (hostname | cut -d . -f 1) ' '
+        set_color red
+        echo  -n \(private\) \'\'
+        set_color green
+        echo -n (prompt_pwd) ' '
+        set_color normal
+      end"'';
 		};
   };
 }
