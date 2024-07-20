@@ -22,6 +22,7 @@
     
     openssl
 
+		veracrypt
 		restic
     gimp
     woeusb-ng
