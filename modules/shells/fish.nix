@@ -9,6 +9,7 @@
     shellInit = ''zoxide init fish | source'';
 		shellAliases = {
 			v = "nvim";
+			vc = "veracrypt";
 			c = "code";
 			p = ''fish -P --init-command "function fish_prompt
         set_color green
