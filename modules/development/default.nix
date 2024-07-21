@@ -22,6 +22,7 @@
     
     openssl
 
+		devbox
 		veracrypt
 		restic
     gimp
