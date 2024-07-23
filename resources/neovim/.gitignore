@@ -1,5 +1,4 @@
-[plugin|plugins|workspace|pack]
-plugin
-pack
-plugins
-workspace
+/plugin/
+/pack
+/plugins
+/workspace
