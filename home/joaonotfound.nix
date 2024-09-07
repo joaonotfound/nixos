@@ -57,7 +57,7 @@
     sshfs
     btop
     pgks-22-11.pcloud
-    dbeaver
+    dbeaver-bin
     obs-studio
     obsidian
     direnv
