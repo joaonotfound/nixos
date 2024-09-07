@@ -18,7 +18,7 @@
 		'';
 		shellAliases = {
 			v = "nvim";
-			vc = "veracrypt";
+			vc = "veracrypt -t";
 			c = "code";
 			cl = "clear";
 			l = "ls -lha";
