@@ -3,6 +3,9 @@
     vim
     neovim
 
+		xclip
+		xsel
+
     ripgrep /** Required to make livegrep plugin work */
   ];
 }
