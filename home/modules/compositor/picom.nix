@@ -1,5 +1,7 @@
-{ pkgs }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [ picom ];
 
-  ".config/picom".source = ../../../resources/dotfiles/picom;    
+  home.file = {
+    ".config/picom".source = ../../../resources/dotfiles/picom;    
+  };
 }

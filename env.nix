@@ -10,6 +10,11 @@
       */
       de = "i3wm";
 
+      compositor = {
+        enable = true;
+        package = "picom";
+      };
+
       /** 
         The user shell 
       */

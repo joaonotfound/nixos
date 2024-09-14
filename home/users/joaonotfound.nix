@@ -14,6 +14,9 @@
     /** Bluetoth */
     (if (environment.bluetooth.enable) then ../modules/bluetooth.nix else {} )  
     
+    /** Compositor */
+    (if (environment.compositor.enable) then ../modules/compositor/${environment.compositor.package}.nix else {})
+    
     /** Games launchers */
     (if (environment.gamesLaunchers) then ../modules/games.nix else {} )
     
