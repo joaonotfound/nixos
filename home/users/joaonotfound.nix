@@ -20,9 +20,9 @@
     /** Trading and crypto */
     (if (environment.trading.enable) then ../modules/btc else {} )
 
-		../modules/de/default.nix
+		../modules/de
 
-    ../themes/gnome/${environment.gnome.theme}
+    ../../themes/gnome/${environment.gnome.theme}
     
     ../modules/reading/zathura.nix
     ../modules/audio/rhythmbox.nix
@@ -76,9 +76,9 @@
   };
 
   home.file = {
-    "wallpapers".source = ../resources/wallpapers;    
+    "wallpapers".source = ../../resources/wallpapers;    
     # Configuration file
-    ".config/i3".source = ../resources/dotfiles/i3;
+    ".config/i3".source = ../../resources/dotfiles/i3;
   };
 
   xdg = {

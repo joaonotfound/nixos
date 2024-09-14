@@ -63,7 +63,7 @@
             home-manager.users = {
               joaonotfound = {
                 imports = [ 
-                  ./home/joaonotfound.nix
+                  ./home/users/joaonotfound.nix
                 ];
               };
             };            

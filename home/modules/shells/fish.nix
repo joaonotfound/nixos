@@ -7,7 +7,7 @@
 
 	home.file = {
 		/* Neofetch config	 */	
-		".config/neofetch".source = ../../resources/dotfiles/neofetch;
+		".config/neofetch".source = ../../../resources/dotfiles/neofetch;
 	};
 
   programs.fish = {

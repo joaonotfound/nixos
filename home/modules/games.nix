@@ -6,7 +6,7 @@
 		# emulationstation-de
 
     lutris
-	  minecraft
+	  # minecraft
 	  prismlauncher
   ];
 }
