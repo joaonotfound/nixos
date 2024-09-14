@@ -1,9 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, environment,... }: {
   home.packages = with pkgs; [ 
     fish
     zoxide
-		neofetch
-  ];
+      ] ++ (if environment.neofetch.enable then [ neofetch ] else []);
 
 	home.file = {
 		/* Neofetch config	 */	
@@ -14,7 +13,7 @@
     enable = true;
     shellInit = ''
 		zoxide init fish | source
-		neofetch
+    ${if environment.neofetch.enable then "neofetch" else ""}
 		'';
 		shellAliases = {
 			v = "nvim";

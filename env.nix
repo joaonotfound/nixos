@@ -14,6 +14,11 @@
         enable = true;
         package = "picom";
       };
+      
+      /** neofetch */
+      neofetch = {
+        enable = false;
+      };
 
       /** 
         The user shell 
