@@ -1,9 +1,9 @@
 { configuration } : {
   imports = [
-    ../../modules/virtualisation.nix
+    ../modules/virtualisation.nix
 
     /** Desktop environment */
-    ../../modules/de/${configuration.de}.nix
+    ../modules/de/${configuration.de}.nix
 
     ../../users
 
