@@ -3,7 +3,7 @@
     /** Gnome Extensions */
     (callPackage ../../packages/gnome/extensions/pomodoro/default.nix {})
 
-		gnome.gnome-tweaks
+		gnome-tweaks
 
 		gnomeExtensions.pop-shell
 		gnomeExtensions.unite
@@ -13,6 +13,7 @@
 		gnomeExtensions.desktop-icons-ng-ding
 		gnomeExtensions.desktop-clock
 	];
+
 	xdg.portal.enable = true;
 
   services.xserver = {

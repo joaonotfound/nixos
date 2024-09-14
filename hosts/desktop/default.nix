@@ -1,7 +1,10 @@
-{
+{ configuration } : {
   imports = [
     ../../modules/virtualisation.nix
-    ../../modules/de/gnome.nix
+
+    /** Desktop environment */
+    ../../modules/de/${configuration.de}.nix
+
     ../../users
 
     ./configuration.nix

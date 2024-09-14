@@ -3,12 +3,12 @@
   isTwm = environment.de != "gnome"; 
 in {
   imports = [    
-    (if (isTwm) then ../modules/launchers/${environment.twm.appLauncher}.fnix else {} )
+    (if (isTwm) then ../launchers/${environment.twm.appLauncher}.nix else {} )
 
     /** Desktop bars */
-    (if (isTwm) then ../modules/bar/${environment.twm.desktopBar}.nix else {} )
+    (if (isTwm) then ../bar/${environment.twm.desktopBar}.nix else {} )
 
-    (if (isTwm) then ../modules/nitrogen.nix else {} )
+    (if (isTwm) then ../nitrogen.nix else {} )
   ];
 
   home.packages = with pkgs; [] ++ (if (isTwm) then [

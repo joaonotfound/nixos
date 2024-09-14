@@ -47,7 +47,7 @@
         };
 
         modules = [
-          ./hosts/desktop
+          ((import ./hosts/desktop) { configuration = env.users.desktop.environment; }) 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

@@ -42,7 +42,7 @@ default_border pixel 0
 default_floating_border none
 
 for_window [class="Nitrogen|gnome-font-viewer|Emoji-mart|jetbrains-studio"] floating enable
-for_window [title=".*Emulator.*"] floating enable
+for_window [title=".*Emulation.*"] floating disable
 
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
@@ -67,9 +67,8 @@ bindsym $mod+Tab focus right
 # Terminal
 # bindsym $mod+Return exec alacritty
 # bindsym $mod+h exec alacritty -e ranger
-bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+Return exec tabbed alacritty --embed
-bindsym $mod+h exec alacritty -e ranger
+bindsym $mod+Return exec kitty
+bindsym $mod+h exec kitty -e ranger
 
 # Emoji picker
 bindsym $mod+g exec flatpak run io.github.vemonet.EmojiMart
@@ -104,7 +103,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # ----- Apps to be launched on startup -------
-exec --no-startup-id nitrogen --random --set-auto; sleep 1;
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id polybar
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 

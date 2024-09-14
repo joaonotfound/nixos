@@ -8,7 +8,7 @@
         Which desktop environment/tiling window manager will be used.
         The value must match the names of files ( without extension ) inside /modules/de/.
       */
-      de = "gnome";
+      de = "i3wm";
 
       /** 
         The user shell 

@@ -16,13 +16,12 @@
     
     /** Games launchers */
     (if (environment.gamesLaunchers) then ../modules/games.nix else {} )
-
-    /** Desktop environmetn */
-    ../modules/de    
     
     /** Trading and crypto */
     (if (environment.trading.enable) then ../modules/btc else {} )
-    
+
+		../modules/de/default.nix
+
     ../themes/gnome/${environment.gnome.theme}
     
     ../modules/reading/zathura.nix
@@ -78,6 +77,8 @@
 
   home.file = {
     "wallpapers".source = ../resources/wallpapers;    
+    # Configuration file
+    ".config/i3".source = ../resources/dotfiles/i3;
   };
 
   xdg = {
