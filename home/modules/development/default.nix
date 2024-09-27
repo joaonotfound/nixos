@@ -33,6 +33,8 @@
     traceroute
   
     nil # Nix Language Server Protocol
+
+		bazel
   ];
 
   programs.git = {

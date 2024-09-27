@@ -1,5 +1,5 @@
-{ pkgs-stable, ... }:{
-  home.packages = [ 
-    pkgs-stable.flutter-unwrapped
+{ pkgs, pkgs-stable, ... }:{
+  home.packages = with pkgs; [ 
+		flutter
   ];
 }
