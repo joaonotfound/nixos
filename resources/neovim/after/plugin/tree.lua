@@ -8,6 +8,12 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 local nvim = require("nvim-tree")
 
+local function on_attach(buffer)
+	local api = require("nvim-tree.api")
+
+	vim.keymap.set('n','<leader>t', function() api.tree.toggle() end, {})
+end
+
 nvim.setup({
 	view = {
 		width = {
@@ -16,6 +22,5 @@ nvim.setup({
 	}
 })
 
-vim.keymap.set('v','<leader>t', function() nvim.api.tree.toggle() end, {})
 
 require("nvim-web-devicons").setup()
