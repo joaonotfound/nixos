@@ -7,7 +7,7 @@ system:
 	sudo nixos-rebuild switch -I nixos-config=./hosts/desktop
 flake:
 	sudo rm -rf ~/.config/nitrogen
-	sudo nixos-rebuild switch --flake .?submodules=1#desktop
+	sudo nixos-rebuild switch -v --flake .?submodules=1#desktop
 stow:
 	pushd ./stow && stow --target="$HOME" */
 backup:
