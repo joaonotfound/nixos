@@ -72,7 +72,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.sudo.extraConfig = "Defaults passprompt=\"🔐Password:\"";
   security.rtkit.enable = true;
