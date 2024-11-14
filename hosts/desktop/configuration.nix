@@ -21,11 +21,11 @@
   i18n = {
     defaultLocale = system.locale;
     supportedLocales = [ "all" ];
-  };
 
-  i18n.inputMethod = { 
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ libpinyin ]; 
+    inputMethod = {
+      enabled = "ibus";
+      ibus.engines = with pkgs.ibus-engines; [ libpinyin anthy ];
+    };
   };
 
   services.gnome.gnome-browser-connector.enable = true;
@@ -91,9 +91,6 @@
   environment.systemPackages = with pkgs; [  
     zsh
     flatpak
-    ibus
-    ibus-engines.libpinyin
-    libpinyin
     fcitx5
     polkit_gnome
     zlib
