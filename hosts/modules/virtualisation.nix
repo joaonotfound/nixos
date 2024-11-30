@@ -15,10 +15,13 @@
     gnome.adwaita-icon-theme
   ];
 
+	hardware.nvidia-container-toolkit.enable = true;
+
   # Manage the virtualisation services
   virtualisation = {
     docker = {
       enable = true;
+			enableNvidia = true;
     };
     virtualbox = {
       host = {

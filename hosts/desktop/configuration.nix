@@ -31,8 +31,10 @@
   services.gnome.gnome-browser-connector.enable = true;
 
   environment.variables = {
-    GDK_DPI_SCALE = "1.1";
+    GDK_DPI_SCALE = "1.2";
   };
+
+	xdg.portal.enable = true;
 
   services.xserver = {    
     xkb = {

@@ -1,6 +1,7 @@
 { pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     i3
+		gnome.gnome-themes-extra
   ];
 
 	xdg.portal.enable = true;

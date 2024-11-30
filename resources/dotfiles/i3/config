@@ -5,7 +5,7 @@ font pango:Segoe UI 10
 
 # Set inner/outer gaps
 smart_gaps off
-gaps inner 4
+gaps inner 6
 gaps outer 2
 
 # Shortcuts to change gaps
@@ -13,25 +13,25 @@ bindsym $mod+Shift+p			gaps inner current plus 2
 bindsym $mod+Shift+o			gaps inner current minus 2
 
 # I3bar configuration
-# bar {
-#         i3bar_command i3bar --transparency
-#         position top
-#         status_command i3status
-#         tray_output primary
-#         separator_symbol "|"
-#         font pango:JetBrains Mono Bold 12
-#         padding 4px 12px
-#         colors {
-#                 background #00000095
-#                 statusline #ffffff
-#                 separator #666666
-#                 focused_workspace  #4c789995 #28557795 #ffffff95
-#                 active_workspace   #33333395 #5f676a95 #ffffff95
-#                 inactive_workspace #33333395 #22222295 #88888895
-#                 urgent_workspace   #2f343a95 #90000095 #ffffff95
-#                 binding_mode       #2f343a95 #90000095 #ffffff95
-#         }
-# }
+bar {
+        i3bar_command i3bar --transparency
+        position top
+        status_command i3status
+        tray_output primary
+        separator_symbol "|"
+        font pango:JetBrains Mono Bold 12
+        padding 4px 12px
+        colors {
+                background #00000095
+                statusline #ffffff
+                separator #666666
+                focused_workspace  #4c789995 #28557795 #ffffff95
+                active_workspace   #33333395 #5f676a95 #ffffff95
+                inactive_workspace #33333395 #22222295 #88888895
+                urgent_workspace   #2f343a95 #90000095 #ffffff95
+                binding_mode       #2f343a95 #90000095 #ffffff95
+        }
+}
 
 
 # Set windows key as main key
@@ -47,7 +47,7 @@ for_window [title=".*Emulation.*"] floating disable
 # Keyboard Layout switchs
 bindsym $mod+F1 exec setxkbmap br # Portuguese - Brazil
 bindsym $mod+F2 exec setxkbmap ru # Russian
-bindsym $mod+F3 exec setxkbmap us # English 
+bindsym $mod+F3 exec setxkbmap us # English
 bindsym $mod+F4 exec setxkbmap cn # Chinese - China
 
 # Use Mouse+$mod to drag floating windows
@@ -106,7 +106,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id polybar
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id systemctl start --user emacs
 
 # Increase the width of the focused window
